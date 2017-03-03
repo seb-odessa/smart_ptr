@@ -16,16 +16,14 @@ class smart_ptr {
 	struct Payload {
 		T* _ptr;
 		size_t _cnt;
-		Payload() : _ptr(0), _cnt(0) {}
-		Payload(T *p) : _ptr(p), _cnt(1) {}		
 	} *_payload;
 
 public:
-	smart_ptr(): _payload(new Payload()) {
+	smart_ptr(): _payload(new Payload({0, 0})) {
 		std::cout<<"smart_ptr::smart_ptr()\n";
 	}
 
-	smart_ptr(T *p): _payload(new Payload(p)) {
+	smart_ptr(T *p): _payload(new Payload({p, 1})) {
 		std::cout<<"smart_ptr::smart_ptr(T*)\n";
 	}
 
