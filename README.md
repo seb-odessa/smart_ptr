@@ -1,6 +1,8 @@
 # smart_ptr
+```
 valgrind ./main >> README.md 
-
+```
+```
 A::A(a)
 smart_ptr::smart_ptr(T*)
 A::A(b)
@@ -40,3 +42,4 @@ A::~A(a)
 ==6999== 
 ==6999== For counts of detected and suppressed errors, rerun with: -v
 ==6999== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+```
